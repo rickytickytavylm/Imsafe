@@ -28,7 +28,8 @@ body {
     color: white;
 }
 
-.badge-ЭмоциональныйШантаж {
+/* Стили для Эмоциональный шантаж */
+.badge-Эмоциональныйшантаж {
     background-color: #ec4899;
     color: white;
 }
@@ -64,8 +65,20 @@ body {
     color: white;
 }
 
+/* Добавляем класс для "Обесценивание + обвинение" */
+.badge-Обесцениваниеобвинение {
+    background-color: #7c3aed;
+    color: white;
+}
+
 .badge-Шантажуходом {
     background-color: #db2777;
+    color: white;
+}
+
+/* Добавляем класс для "Эмоциональный шантаж" */
+.badge-Эмоциональныйшантаж {
+    background-color: #ec4899;
     color: white;
 }
 
@@ -93,7 +106,4 @@ body {
     color: white;
 }
 
-.pagination-button:hover {
-    background-color: #93c5fd;
-    color: white;
-}
+/* Removed hover effect as requested */

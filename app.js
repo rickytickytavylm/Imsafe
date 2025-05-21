@@ -47,11 +47,11 @@ function renderPhrasesList() {
         const phraseElement = document.createElement('div');
         phraseElement.className = 'bg-white/60 backdrop-blur-xl rounded-xl shadow-sm px-4 py-3 mb-3 transition hover:shadow cursor-pointer';
         
-        // Создаем CSS-класс для типа манипуляции, удаляя пробелы
-        const typeClass = phrase.type === 'Перенос вины' ? 'Переносвины' : phrase.type.replace(/\s+/g, '');
+        // Создаем CSS-класс для типа манипуляции, удаляя пробелы и специальные символы
+        const typeClass = phrase.type === 'Перенос вины' ? 'Переносвины' : phrase.type.replace(/[\s\+]+/g, '');
         
         phraseElement.innerHTML = `
-            <p class="font-medium mb-2">${phrase.text}</p>
+            <p class="font-medium mb-3">${phrase.text}</p>
             <span class="badge-${typeClass} px-2 py-1 rounded-full text-xs font-medium">${phrase.type}</span>
         `;
         
@@ -90,8 +90,8 @@ function showDetailsScreen(phraseId) {
     // Update UI elements
     phraseText.textContent = phrase.text;
     phraseType.textContent = phrase.type;
-    // Создаем CSS-класс для типа манипуляции, удаляя пробелы
-    const typeClass = phrase.type === 'Перенос вины' ? 'Переносвины' : phrase.type.replace(/\s+/g, '');
+    // Создаем CSS-класс для типа манипуляции, удаляя пробелы и специальные символы
+    const typeClass = phrase.type === 'Перенос вины' ? 'Переносвины' : phrase.type.replace(/[\s\+]+/g, '');
     phraseType.className = `badge-${typeClass} px-3 py-1 rounded-full text-sm font-medium`;
     phraseDescription.textContent = phrase.description;
     
